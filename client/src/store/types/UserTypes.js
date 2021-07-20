@@ -1,0 +1,6 @@
+export const SET_LOADER = 'SET_LOADER'
+export const CLOSE_LOADER = 'CLOSE_LOADER'
+export const REGESTER_ERRORS = 'REGESTER_ERRORS'
+export const LOGIN_ERRORS = 'LOGIN_ERRORS'
+export const SET_TOKEN = 'SET_TOKEN'
+export const LOGOUT = 'LOGOUT'

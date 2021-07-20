@@ -1,0 +1,38 @@
+.sidebar {
+    &__element:first-child {
+        border-top: 1px solid $silverLight!important;
+        border-top-left-radius: .6rem;
+        border-top-right-radius: .6rem;
+        background: $white!important;
+        cursor: default;
+        padding: 1.5rem 5.5rem;
+    }
+    &__element:last-child {
+        border-bottom-left-radius: .6rem;
+        border-bottom-right-radius: .6rem;
+    }
+    &__element {
+        background: $white;
+        border: 1px solid $silverLight;
+        border-top: none;
+        cursor: pointer;
+        a {
+            color: $black;
+            font-size: 1.4rem;
+            color: #000;
+            padding: 1.5rem 5.5rem;
+            display: block;
+        }
+        h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+        }
+        &:hover {
+            background: $green;
+        }
+        &:hover a {
+            color: $white;
+            
+        }
+    }
+}
