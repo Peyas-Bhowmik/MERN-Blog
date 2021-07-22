@@ -100,7 +100,7 @@ export default function Create(props) {
             createErrors.map((err) => toast.error(err.msg))
         }
 
-    }, [createErrors, redirect,props.history])
+    }, [createErrors, redirect])
     
     return (
         <div className="create mt-100">
