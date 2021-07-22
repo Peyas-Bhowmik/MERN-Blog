@@ -32,11 +32,11 @@ export default function DashBoard() {
             toast.success(message)
             dispatch({ type: REMOVE_MESSAGE })
         }
-    }, [message,dispatch,redirect])
+    }, [message,redirect])
 
     useEffect(() => {
         dispatch(fetchPosts(_id, page))
-    },[page,dispatch,_id])
+    },[page])
 
     const deletePost = async (id) => {
         const confirm = window.confirm("Are you really want to delete the post")

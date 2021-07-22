@@ -30,13 +30,13 @@ export default function ChangePassword() {
             updateErrors.map(error => toast.error(error.msg))
             dispatch({ type: RESER_PROFILE_ERRORS })
         }
-    }, [updateErrors,dispatch])
+    }, [updateErrors])
 
     useEffect(() => {
         if(redirect){
             push('/dashboard')
         }
-    },[redirect,push])
+    },[redirect])
 
 
     return !loading ?

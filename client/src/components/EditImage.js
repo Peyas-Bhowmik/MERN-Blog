@@ -48,13 +48,13 @@ export default function EditImage() {
             })
             dispatch({ type: RESET_IMAGE_UPDATE_ERRORS })
         }
-    }, [updateImageErrors,dispatch])
+    }, [updateImageErrors])
 
     useEffect(() => {
         if (redirect) {
             push('/dashboard')
         }
-    }, [redirect,push])
+    }, [redirect])
 
 
     return (

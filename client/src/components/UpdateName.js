@@ -17,20 +17,20 @@ export default function UpdateName() {
     
     useEffect(() => {
         setUserName(name)
-    },[name])
+    },[])
 
     useEffect(() => {
         if(updateErrors.length !== 0) {
             updateErrors.map(error => toast.error(error.msg))
             dispatch({type: RESER_PROFILE_ERRORS})
         }
-    },[updateErrors,dispatch])
+    },[updateErrors])
 
     useEffect(() => {
         if(redirect){
             push('/dashboard')
         }
-    },[redirect,push])
+    },[redirect])
 
     const updateNameMethod = e => {
         e.preventDefault()

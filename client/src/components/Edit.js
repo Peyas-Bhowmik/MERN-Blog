@@ -32,20 +32,20 @@ export default function Edit() {
         } else {
             dispatch(fetchPost(id))
         }
-    }, [post,dispatch,id,postStatus])
+    }, [post])
 
     useEffect(() => {
         if (editErrors.length !== 0) {
             editErrors.map(error => (toast.error(error.msg)))
             dispatch({type: RESET_UPDATE_ERRORS})
         }
-    }, [editErrors,dispatch])
+    }, [editErrors])
 
     useEffect(() => {
         if (redirect) {
             push('/dashboard')
         }
-    }, [redirect,push])
+    }, [redirect])
 
     const updatePost = (e) => {
         e.preventDefault()

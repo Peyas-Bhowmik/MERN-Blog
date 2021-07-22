@@ -23,7 +23,7 @@ export default function Details() {
 
     useEffect(() => {
         dispatch(postDetails(id))
-    }, [id,dispatch])
+    }, [id])
 
 
 

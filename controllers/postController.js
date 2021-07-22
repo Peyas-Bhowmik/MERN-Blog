@@ -41,16 +41,16 @@ module.exports.createPost = (req, res) => {
             errors.push({ msg: 'Please enter a unique slug/URL' })
         }
         if (errors.length !== 0) {
-            return res.status(404).json({ errors })
+            return res.status(404).json({ errors, files })
         } else {
-            const textBody = htmlToText(body)
+            //const textBody = htmlToText(body)
             const newPath = __dirname + `/../client/build/images/${files.image.name}`
             fs.copyFile(files.image.path, newPath, async (error) => {
                 if (!error) {
                     try {
                         const response = await Post.create({
                             title,
-                            body: textBody,
+                            body,
                             image: files.image.name,
                             description,
                             slug,
